@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Positioning</title>
+
+    <style>
+        .parent {
+            background-color: rgb(158, 112, 158);
+            border: 2px solid rgb(255, 0, 0);
+            height: 1000px;
+            position: relative;
+        }
+
+        .child {
+            background-color: pink;
+            border: 2px solid blue;
+            
+            top: 0px;
+            left: 50px;
+            position: static; 
+            /* postion: static = default value */
+            /* position: absolute; */
+            /* position: fixed */
+            /* position: sticky */
+            z-index: 1000; /*highest number = most on top     e.g -1 for when you want an element at the back, 999 for it to be at the front*/
+            
+            
+        }
+    </style>
+
+
+
+</head>
+<body>
+    <div class="parent">
+        Parent div
+        <div class="child">Child div</div>
+        Some text underneath the child div. <br/>
+        And finally some more text.
+    </div>
+</body>
+</html>

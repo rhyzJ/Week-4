@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>CSS Grid</title>
+
+        <style>
+
+        * {
+            box-sizing: border-box;
+            /* reset CSS */
+            margin: 0;
+            padding: 0;
+        }
+
+        #main {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            column-gap: 50px;
+            row-gap: 20px;
+            /* grid-template-rows: 200px 200px; */
+            /* default: align-items: stretch; */
+
+        }
+        
+        .child-el1 {
+           background-color: cornflowerblue;
+           height: 100px;
+        }
+
+        .child-el2 {
+           background-color: rgb(237, 100, 207);
+           grid-column: 2/-1;
+        }
+
+        .child-el3 {
+           background-color: rgb(200, 237, 100); 
+           grid-column: 2/3;
+        }
+
+        .child-el4 {
+           background-color: rgb(100, 237, 107); 
+        }
+
+        .child-el5 {
+           background-color: rgb(142, 109, 155);
+           grid-column: 1/2;
+           grid-row: 2/2;
+        }
+
+        </style>
+    </head>
+
+
+    <body>
+
+        <div id="main">
+            <div class="child-el1">My first box</div>
+            <div class="child-el2">My second box</div>
+            <div class="child-el3">My third box</div>
+            <div class="child-el4">My fourth box</div>
+            <div class="child-el5">My fifth box</div>
+        </div>
+
+    
+    </body>
+</html>
